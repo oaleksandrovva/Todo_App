@@ -1,9 +1,9 @@
 {
-  "name": "react_todo-app",
+  "name": "todo_app",
   "homepage": ".",
   "version": "0.1.0",
   "keywords": [],
-  "author": "Mate Academy",
+  "author": "oaleksandrovva",
   "license": "GPL-3.0",
   "dependencies": {
     "classnames": "^2.2.6",

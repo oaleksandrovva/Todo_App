@@ -4,7 +4,7 @@ Implement [TODO app](https://todomvc.com/examples/vanillajs/) working as describ
 
 You can check this app here:
 
-[DEMO LINK](https://oaleksandrovva.github.io/react_todo-app/)
+[DEMO LINK](https://oaleksandrovva.github.io/Todo_App/)
 
 ### Description
 
