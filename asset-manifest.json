@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.96f8354a.chunk.css",
-    "main.js": "./static/js/main.39f1bbfa.chunk.js",
-    "main.js.map": "./static/js/main.39f1bbfa.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.a9b166eb.js",
-    "runtime-main.js.map": "./static/js/runtime-main.a9b166eb.js.map",
-    "static/js/2.3e84ebff.chunk.js": "./static/js/2.3e84ebff.chunk.js",
-    "static/js/2.3e84ebff.chunk.js.map": "./static/js/2.3e84ebff.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.883107cbded8b1705e9a4f0a6925a155.js": "./precache-manifest.883107cbded8b1705e9a4f0a6925a155.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.96f8354a.chunk.css.map": "./static/css/main.96f8354a.chunk.css.map",
-    "static/js/2.3e84ebff.chunk.js.LICENSE.txt": "./static/js/2.3e84ebff.chunk.js.LICENSE.txt"
+    "main.css": "/Todo_App/static/css/main.96f8354a.chunk.css",
+    "main.js": "/Todo_App/static/js/main.39f1bbfa.chunk.js",
+    "main.js.map": "/Todo_App/static/js/main.39f1bbfa.chunk.js.map",
+    "runtime-main.js": "/Todo_App/static/js/runtime-main.849cd9c3.js",
+    "runtime-main.js.map": "/Todo_App/static/js/runtime-main.849cd9c3.js.map",
+    "static/js/2.3e84ebff.chunk.js": "/Todo_App/static/js/2.3e84ebff.chunk.js",
+    "static/js/2.3e84ebff.chunk.js.map": "/Todo_App/static/js/2.3e84ebff.chunk.js.map",
+    "index.html": "/Todo_App/index.html",
+    "precache-manifest.18a55dd4873889f20804a960a6bddea8.js": "/Todo_App/precache-manifest.18a55dd4873889f20804a960a6bddea8.js",
+    "service-worker.js": "/Todo_App/service-worker.js",
+    "static/css/main.96f8354a.chunk.css.map": "/Todo_App/static/css/main.96f8354a.chunk.css.map",
+    "static/js/2.3e84ebff.chunk.js.LICENSE.txt": "/Todo_App/static/js/2.3e84ebff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a9b166eb.js",
+    "static/js/runtime-main.849cd9c3.js",
     "static/js/2.3e84ebff.chunk.js",
     "static/css/main.96f8354a.chunk.css",
     "static/js/main.39f1bbfa.chunk.js"
