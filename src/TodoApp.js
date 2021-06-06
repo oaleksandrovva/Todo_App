@@ -7,42 +7,36 @@ import { TodosContext } from './TodosContext';
 
 function TodoApp() {
   const { todos, setTodos } = useContext(TodosContext);
+  const [isAllCompleted, setIsAllCompleted] = useState(false);
   const [filter, setFilter] = useState('All');
-
-  const activeTodos = todos.filter(todo => !todo.completed);
-  const completedTodos = todos.filter(todo => todo.completed);
 
   const addNewTodo = useCallback((newTodo) => {
     setTodos([...todos, newTodo]);
   }, [todos, setTodos]);
 
-  const handleToggleAll = () => (
-    (todos.some(todo => !todo.completed))
-      ? setTodos(todos.map(todo => ({
-        ...todo,
-        completed: true,
-      })))
-      : setTodos(todos.map(todo => ({
-        ...todo,
-        completed: false,
-      })))
-  );
+  const handleToggleAll = () => {
+    setTodos(todos.map(todo => ({
+      ...todo,
+      completed: !isAllCompleted,
+    })));
+    setIsAllCompleted(!isAllCompleted);
+  };
 
   const filterTodos = useCallback((filterBy) => {
     switch (filterBy) {
       case 'Active':
-        return activeTodos;
+        return todos.filter(todo => !todo.completed);
       case 'Completed':
-        return completedTodos;
+        return todos.filter(todo => todo.completed);
       case 'All':
       default:
         return todos;
     }
-  }, [todos, activeTodos, completedTodos]);
+  }, [todos]);
 
   const deleteCompletedTodos = useCallback(() => {
-    setTodos(activeTodos);
-  }, [activeTodos, setTodos]);
+    setTodos(todos.filter(todo => !todo.completed));
+  }, [todos, setTodos]);
 
   const filteredTodos = useMemo(
     () => filterTodos(filter),
@@ -74,8 +68,6 @@ function TodoApp() {
 
           <footer className="footer">
             <TodoFilter
-              activeTodos={activeTodos}
-              completedTodos={completedTodos}
               todos={filteredTodos}
               filter={filter}
               setFilter={setFilter}

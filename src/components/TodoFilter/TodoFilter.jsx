@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import className from 'classnames';
 
-export const TodoFilter = ({
-  activeTodos,
-  completedTodos,
+export const TodoFilter = React.memo(({
+  todos,
   filter,
   setFilter,
   onDeleteCompletedTodos,
 }) => (
   <>
     <span className="todo-count">
-      {`${activeTodos.length} items left`}
+      {`${todos.filter(todo => (
+        !todo.completed
+      )).length} items left`}
     </span>
 
     <ul className="filters">
@@ -52,7 +53,7 @@ export const TodoFilter = ({
       </li>
     </ul>
 
-    {completedTodos.length > 0 && (
+    {todos.some(todo => todo.completed) && (
       <button
         type="button"
         className="clear-completed"
@@ -62,11 +63,10 @@ export const TodoFilter = ({
       </button>
     )}
   </>
-);
+));
 
 TodoFilter.propTypes = {
-  activeTodos: PropTypes.instanceOf(Array).isRequired,
-  completedTodos: PropTypes.instanceOf(Array).isRequired,
+  todos: PropTypes.instanceOf(Array).isRequired,
   filter: PropTypes.string.isRequired,
   setFilter: PropTypes.func.isRequired,
   onDeleteCompletedTodos: PropTypes.func.isRequired,
